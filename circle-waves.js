@@ -74,10 +74,6 @@ $(function() {
   animatePool($pool, 0);
 });
 
-function bindEvents(startBtn, slide) {
-  // body...
-}
-
 function makePool(pool, circle) {
   for (var i = 0; i < numCircles; i++) {
     pool.append(circle.clone());
