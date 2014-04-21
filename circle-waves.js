@@ -43,25 +43,24 @@ $(function() {
     }
   });
 
-  $('.slider').on('slide', function() {
-    switch (this.id) {
-      case 'speedSlider':
-        speed = $(this).slider('value');
-        speedDisplay.text(speed);
-      break;
-      case 'offsetSlider':
-        offset = $(this).slider('value');
-        offsetDisplay.text(offset);
-      break;
-      case 'separationSlider':
-        separation = $(this).slider('value');
-        separationDisplay.text(separation);
-        $('.circle').css({
-          'margin-top': '-'+ separation +'px',
-          'margin-left': '-'+ separation +'px'
-        })
-      break;
-    }
+  speedSlider.on('slide', function() {
+    speed = $(this).slider('value');
+    speedDisplay.text(speed);
+  });
+
+  offsetSlider.on('slide', function() {
+    offset = $(this).slider('value');
+    offsetDisplay.text(offset);
+  });
+
+  separationSlider.on('slide', function() {
+    separation = $(this).slider('value');
+    separationDisplay.text(separation);
+
+    $('.circle').css({
+      'margin-top': '-'+ separation +'px',
+      'margin-left': '-'+ separation +'px'
+    });
   });
 
   numCirclesInput.on('keyup', function() {
