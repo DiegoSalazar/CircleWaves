@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Circle Waves</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="circle-waves.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Circle Waves</h1>
+
+          <div class="row">
+            <div class="col-sm-2">
+              <p>
+                Amount of Circles
+                <input type="text" id="numCircles" value="500" class="input-sm">
+              </p>
+              <p><button id="start">Stop</button></p>
+            </div>
+            <div class="col-sm-10">
+              <div class="row">
+                <div class="col-sm-2">
+                  <p>Slowdown <code><span id="speedDisplay">0</span></code></p>
+                </div>
+                <div class="col-sm-10">
+                  <div id="speedSlider" class="slider"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-2">
+                  <p>Shape <code><span id="offsetDisplay">0</span></code></p>
+                </div>
+                <div class="col-sm-10">
+                  <div id="offsetSlider" class="slider"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-2">
+                  <p>Separation <code><span id="separationDisplay">0</span></code></p>
+                </div>
+                <div class="col-sm-10">
+                  <div id="separationSlider" class="slider"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div id="pool">
+            <div class="circle">
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

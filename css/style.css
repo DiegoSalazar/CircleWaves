@@ -1,0 +1,26 @@
+#pool {
+  border: 2px solid #395580;
+  overflow: hidden;
+  position: relative;
+  padding: 25px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: -20px;
+  margin-left: -20px;
+  position: relative;
+  float: left;
+  border: 1px solid #333;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -5px;
+  left: 20px;
+  position: absolute;
+  background: #333;
+}
