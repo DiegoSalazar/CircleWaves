@@ -1,9 +1,9 @@
-play = true;
-numCircles = 500;
-startTime = undefined;
-speed = 3;
-offset = 21;
-separation = 20;
+var play = true,
+    numCircles = 500,
+    startTime = undefined,
+    speed = 3,
+    offset = 21,
+    separation = 20;
 
 $(function() {
   var $pool = $('#pool'),
