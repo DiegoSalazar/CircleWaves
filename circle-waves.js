@@ -1,5 +1,4 @@
 play = true;
-duration = 1000;
 numCircles = 500;
 startTime = undefined;
 speed = 3;
@@ -61,7 +60,7 @@ $(function() {
 
   numCirclesInput.on('keyup', function() {
     numCircles = this.value;
-    $pool.html('');
+    $pool.empty();
     makePool($pool, origCircle);
   });
 
@@ -89,13 +88,8 @@ function animatePool(pool, curTime) {
 
 function animate(pool, curTime) {
   if (!play) return;
-
-  if (curTime === undefined)
-    curTime = Date.now();
-  if (startTime === undefined)
-    startTime = curTime;
-
-  // elem.style.left = ((curTime - startTime)/10 % 500) + "px";
+  if (curTime === undefined) { curTime = Date.now(); }
+  if (startTime === undefined) { startTime = curTime; }
 
   var degree = (curTime - startTime) / speed % 360;
 
