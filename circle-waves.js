@@ -20,18 +20,24 @@ $(function() {
       separationDisplay = $('#separationDisplay');
 
   numCircles = numCirclesInput.val();
+
   speedSlider.slider({ value: speed });
   offsetSlider.slider({ value: offset });
   separationSlider.slider({ value: separation });
+
   speedDisplay.text(speed);
   offsetDisplay.text(offset);
   separationDisplay.text(separation);
 
   startBtn.click(function() {
+    var btn = $(this);
+
     if (this.innerText == 'Stop') {
+      btn.removeClass('btn-danger').addClass('btn-success');
       this.innerText = 'Start';
       play = false;
     } else {
+      btn.removeClass('btn-success').addClass('btn-danger');
       this.innerText = 'Stop';
       play = true;
     }
@@ -94,6 +100,6 @@ function animate(pool, curTime) {
   var degree = (curTime - startTime) / speed % 360;
 
   pool.children().each(function(i, circle) {
-    $(circle).css('transform', 'rotate('+ (degree + (i*offset)) +'deg)')
+    $(circle).css('transform', 'rotate('+ (i * offset + degree) +'deg)')
   });
 }
