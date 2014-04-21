@@ -65,7 +65,7 @@ $(function() {
   });
 
   numCirclesInput.on('keyup', function() {
-    numCircles = this.value;
+    numCircles = parseInt(this.value);
     $pool.empty();
     makePool($pool, origCircle);
   });

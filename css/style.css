@@ -25,3 +25,6 @@
   background: #333;
 }
 .slider { width: 95%; }
+.sliders td:first {
+  width: 50px;
+}
